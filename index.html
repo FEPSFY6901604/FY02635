@@ -144,7 +144,30 @@
  </table>
 
 <p id="date&time"></p>
+<div id="last-updaed">Loading last update time...</div>
 
+<!-- Verify Button -->
+<button onclick="veifyLastUpdaedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+
+<script>
+  async function getLastUpdatedTime() {
+      const username = 'ar02635';
+      const repo = 'FY02635';
+      const url = 
+      try {
+          const response = awai fech(url, {
+              method: 'GET',
+              headers: {
+                'Accept': 'application/vnd.github.v3+json',
+              }
+          });
+          if (!response.ok) {
+              throw new Error('Error fetching data: ${response.status} - ${response.statusText}');
+          }
+          const commits = await response.json();
+        if (commits && commits.length >0 {
 <script>
 
 //Javascript to display the date and time on my webpage
