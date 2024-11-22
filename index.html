@@ -55,6 +55,9 @@
   <tr>
     <td><a href="#Analysis and discussion">Analysis and discusssion</td>
   </tr>
+  <tr>
+    <td><a href="#Conclusion">Conclusion</td>
+  </tr>
 
   <tr>
     <td><a href="#References">References</td>
@@ -67,7 +70,7 @@
      <style>
      .mySlides {display:none;}
      </style>
-       <h3 id="Abstract">Abstract</h3>
+     <h3 id="Abstract">Abstract</h3>
   <p class="ex1">
   <pre>
     This paper presents a novel adaptive active learning strategy, the most accurate classification model from a heterogenous classifier pool is selected at each learning epoch. Our goal is to achieve greater incremental
@@ -90,6 +93,17 @@
     of the class labels. After adding the newly labeled instances to the current training set, a revised model is subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of learning
     at each epoch. The process is continued until some stopping criterion has been met, such as reaching a stage where information from the selected instances is contrary to the model, causing the classifier confidence to
     drop, as in Vlachos (2008).”
+  </pre>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <style>
+     .mySlides {display:none;}
+     </style>
+     <h3 id="Conclusion">Conclusion</h3>
+  <p class="ex1">
+  <pre>
+   "This is my conclusion" 
   </pre>
 
   </p>
@@ -222,7 +236,9 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const AnalysisCount = displayWordCount("Analysis and discussion_InText");
+    const IntroductionCount = displayWordCount("Conclusion_InText");
+    
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
