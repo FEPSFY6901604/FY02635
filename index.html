@@ -154,7 +154,8 @@
             function drawChart() {
 
               Var data = new google.visualization.DataTable();
-                
+              data.addColumn('number', 'Year');
+              data.addColumn('number', 'French Guiana');
 
                 data.addRows([
                     [2000, 1952.98],
@@ -184,7 +185,8 @@
                 var options = {
                     title: 'French Guiana GDP trend (2000-2022)',
                     hAxis: {title: 'Year'},
-                    vAxis: {title: 'GDP per million euros'},
+                    vAxis: {title: 'GDP per million euros'}
+                  
                 };
 
                 var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
