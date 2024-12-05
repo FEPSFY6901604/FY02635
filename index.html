@@ -138,30 +138,47 @@
                <mo>+</mo><mi>4</mi>
        <mo>=</mo>
        <mi>O</mi>
-    <script type="text/javascript">
-      function drawChart(){
-        var data = new google.visualization.DataTable();
-        data.addColumn('number','Age');
-        data.addColumn('number','Salary');
+    <html>
+    <head>
+        <title>City Population Line Chart</title>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        <div id="chart_div" style="width: 1000px; height: 600px;"></div>
 
-        data.addRows([
-          [2000,1952.98],
-          [2001,2270.45],
-          [2002,2436.66],
-          [2003,2403.19],
-          [2004,2553.87]
-    ]);
-    var options = {
-      title:'Age vs. Salary',
-      hAxis: {title:'Age'},
-      vAxis: {title:'Salary'}
-    };
-    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-    chart.draw(data,options);
-  }
-</script>
-    
-    
+        <script>
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('number', 'Year');
+                data.addColumn('number', 'London');
+                
+
+                data.addRows([
+                    [2013, 8414000],
+                    [2015, 8661000],
+                    [2017, 8916000],
+                    [2019, 9177000],
+                    [2021, 9426000],
+                    [2023, 9648000]
+                ]);
+                var options = {
+                    title: 'City Population Trends (2013-2023)',
+                    hAxis: {title: 'Year'},
+                    vAxis: {title: 'Population'},
+                    curveType: 'funtion',
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+                chart.draw(data,options);
+            }
+                       
+        </script>   
+  </body>
+  </html>
     
   
 
