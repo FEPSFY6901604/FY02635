@@ -138,7 +138,31 @@
                <mo>+</mo><mi>4</mi>
        <mo>=</mo>
        <mi>O</mi>
+    <script type="text/javascript">
+      function drawChart(){
+        var data = new google.visualization.DataTable();
+        data.addColumn('number','Year');
+        data.addColumn('million euros','GDP');
 
+        data.addRows([
+          [2000,1952.98],
+          [2001,2270.45],
+          [2002,2436.66],
+          [2003,2403.19],
+          [2004,2553.87]
+    ]);
+    var options = {
+      title:'Year vs. GDP',
+      hAxis: {title:'Year'},
+      vAxis: {title:'GDP'}
+    };
+    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+    chart.draw(data,options);
+      }
+    </script>
+    
+    
+    
   
 
    Table 1:Data on cost and lifespan of bridge repairs
